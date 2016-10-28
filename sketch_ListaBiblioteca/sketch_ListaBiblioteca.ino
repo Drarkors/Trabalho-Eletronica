@@ -5,6 +5,7 @@ int led2 = 11;
 int led3 = 12;
 
 String command = "";
+int x,y;
 
 void setup() {
   setLed(led1);
@@ -51,7 +52,7 @@ void executar(String operacao, int porta, int brilho) {
         }
     }
     if(operacao.equals("PISCAR")){
-      piscar(porta,brilho);
+      piscar(porta,x,y);
     }
 }
  
@@ -75,6 +76,8 @@ void serialEvent(){
      }
 
      executar(operacao, porta, brilho);
+     x = Serial.readString().toInt;
+     y = Serial.readString().toInt;
   }
   
 }

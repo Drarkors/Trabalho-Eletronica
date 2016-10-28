@@ -37,11 +37,14 @@ LED::acender(int led, int x){
     this -> state = true;
 }
 
-LED::piscar(int led, int y){
-    digitalWrite(led, HIGH);
-    delay(y);
-    digitalWrite(led,LOW);
-    delay(y);
+LED::piscar(int led, int x,int y){
+    while(x > 0){
+        digitalWrite(led, HIGH);
+        delay(y);
+        digitalWrite(led,LOW);
+        delay(y);
+        x--;
+    }
 }
 
 LED::isAceso(int led){
