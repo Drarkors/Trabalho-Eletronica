@@ -1,24 +1,24 @@
-#include "LED.h"
+#include "Led.h"
 
-LED::LED(int led){
+Led::Led(int led){
     this -> led = led;
 }
 
-LED::LED(int led, bool state){
+Led::Led(int led, bool state){
     this -> led = led;
     this -> state = state;
 }
 
-LED::getLed(){
+Led::getLed(){
     return this -> led;
 }
 
-LED::setLed(int led){
+Led::setLed(int led){
     this -> led = led;
     pinMode(led,OUTPUT);
 }
 
-LED::getState(int led){
+Led::getState(int led){
     return digitalRead(this -> led);
 }
 
@@ -47,7 +47,7 @@ LED::piscar(int led, int x,int y){
     }
 }
 
-LED::isAceso(int led){
+LED::isAceso(){
     return getState(led);
 }
  LED::isPwn(int led){

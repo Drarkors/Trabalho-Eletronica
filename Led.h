@@ -25,7 +25,7 @@ class Led {
         void inverter(int led);
 
         void acender(int led, int x);
-        void piscar(int led, int y);
+        void piscar(int led, int x,int y);
 
         bool isAceso(int led);
         bool isPwm(int led);
